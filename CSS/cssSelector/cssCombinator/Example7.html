@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div > p {
+        background-color: grey;
+        color: #ce22d4;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>This paragraph will be selected because it is inside a div</p>
+      <p>This paragraph will also be selected because it is inside a div</p>
+      <div>
+        <p>
+          This paragraph will be selected because it is inside a div (inside
+          another div element).
+        </p>
+      </div>
+      <section>
+        <p>
+          This paragraph will not be selected because it is inside a div but
+          also inside a section element.
+        </p>
+      </section>
+      <p>This paragraph will be selected because it is inside a div.</p>
+    </div>
+
+    <p>This paragraph will not be selected because it is not inside a div.</p>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1.name::first-letter {
+        color: red;
+      }
+      h2:hover {
+        background-color: yellow;
+        color: blue;
+        border: 2px solid green;
+        border-radius: 5px;
+        display: inline;
+      }
+      h2::before{
+          content:"I am a";
+          color: red;
+      }
+      h2::after{
+          content:"As well as Trainer in GorwTech";
+          color: #0004ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi,My Self</h1>
+    <h1 class="name">KaranRaj</h1>
+    <h2>Full Stack Developer</h2>
+  </body>
+</html>

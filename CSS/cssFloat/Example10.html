@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .header {
+        background-color: hsl(222, 92%, 14%);
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .footer {
+        background-color: hsl(222, 92%, 14%);
+        color: white;
+        padding: 15px;
+      }
+
+      .topmenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: hsl(220, 100%, 1%);
+      }
+
+      .topmenu li {
+        float: left;
+      }
+
+      .topmenu li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      .topmenu li a:hover {
+        background-color: hsl(222, 18%, 25%);
+      }
+
+      .topmenu li a.active {
+        color: white;
+        background-color: hsl(222, 18%, 25%);
+      }
+
+      .column {
+        float: left;
+        padding: 15px;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .sidemenu {
+        width: 20%;
+      }
+
+      .content {
+        width: 75%;
+      }
+
+      .sidemenu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidemenu li a {
+        margin-bottom: 4px;
+        display: block;
+        padding: 8px;
+        background-color: hsl(222, 18%, 25%);
+        text-decoration: none;
+        color:white;
+      }
+
+      .sidemenu li a:hover {
+        background-color: hsl(196, 88%, 7%);
+        color: white;
+      }
+
+      .sidemenu li a.active {
+        background-color:  hsl(196, 88%, 7%);
+        color: white;
+      }
+      .topicTree{
+          font-size: 20px;
+          line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+     <ul class="topmenu">
+          <li><a href="#home" class="active">GrowTech</a></li>
+          <li><a href="#home">Training</a></li>
+          <li><a href="#news">Reviews</a></li>
+          <li><a href="#contact">MockInterview</a></li>
+          <li><a href="#about">Job Oppurtinitues</a></li>
+        </ul>
+
+    <div class="clearfix">
+      <div class="column sidemenu">
+        <ul>
+          <li><a href="#product">Product Management</a></li>
+          <li><a href="#advdsa" class="active">Advanced DSA</a></li>
+          <li><a href="#product">Product Management</a></li>
+          <li><a href="#concprog">Concurrent Programming</a></li>
+          <li><a href="#sysdesign">System Design</a></li>
+          <li><a href="#webdev">Web Development</a></li>
+        </ul>
+      </div>
+
+      <div class="column content">
+        <div class="header">
+          <h1>Advanced DSA</h1>
+        </div>
+
+        <h2><b>4 weeks</b></h2>
+        <p class="topicTree">
+          Combinatorics and Probability<br />
+          Matrix exponentiation<br />
+          Advanced Trees: Segment Tree, k-D Tree<br />
+          Advanced Dynamic Programming 1<br />
+          Advanced Graphs 1: Bridges, Articulation point<br />
+          Advanced Graphs 2: Network Flow<br />
+          Miscellaneous company problem discussion
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h3>Start your learning journey with GrowTech.......</h3>
+    </div>
+  </body>
+</html>

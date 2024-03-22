@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* div + p {
+        background-color: yellow;
+      } */
+      div ~ p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The general sibling selector selects all HTML elements that are siblings
+      of a specified element i.e. the elements have having the common parent
+      will be selected.
+    </p>
+
+    <p>This is a paragraph.</p>
+
+    <div>
+      <p>This is a paragraph inside div.</p>
+    </div>
+    <h1>Hello</h1>
+    <p>This is a paragraph and also a sibling of div.</p>
+
+    <p>This is a paragraph and also a sibling of div.</p>
+    <div>This is a div, also sibling of above two</div>
+    <p>This is a paragraph and also a sibling of div.</p>
+    <p>This is a paragraph and also a sibling of div.</p>
+  </body>
+</html>

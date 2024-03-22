@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        background-color: hwb(151 53% 12%);
+        flex-direction:row-reverse;
+      }
+
+      .flex-container > div {
+        background-color: hsl(126, 85%, 54%);
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Example of flex container</h1>
+
+    <div class="flex-container">
+      <div>Home</div>
+      <div>About</div>
+      <div>Contact</div>
+    </div>
+
+    <p>
+      The flex-container should have a parent element with the
+      <em>display</em> property set as <em>flex</em>.
+    </p>
+  </body>
+</html>

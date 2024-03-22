@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+          th, td {
+               border: 2px solid #777;
+               padding: .5rem;
+          }
+          table{
+               /* border-spacing: 15px; */
+               border-collapse: collapse;
+          }
+         tbody tr:nth-child(odd){
+               text-align:left;
+               color: blue;
+               background-color: hwb(30 11% 89% / 0.751);
+          }
+         tbody tr:nth-child(even){
+               text-align:left;
+               color: blue;
+               background-color: rgba(43, 103, 79, 0.751);
+          }
+    </style>
+  </head>
+  <body>
+     <h1>City Table</h1>
+    <table>
+      <caption>
+        Table of Indian States and its Capitals
+      </caption>
+      <thead>
+        <tr>
+          <th>Sl no.</th>
+          <th>State</th>
+          <th>Capital</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>West Bengal</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Madhya Pradesh</td>
+          <td>Bhopal</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Karnataka</td>
+          <td>Bengaluru</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

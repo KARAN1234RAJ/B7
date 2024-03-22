@@ -1,0 +1,16 @@
+/* styles original div */
+div.original {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  border: 4px solid black;
+  perspective: 80px;
+}
+
+/* styles div with rotate class */
+div.rotate {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transform: rotate3d(0, 1, 0, 30deg);
+}
