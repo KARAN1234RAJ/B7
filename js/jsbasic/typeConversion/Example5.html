@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // String Conversion Implicitly
+      console.log("25" + 56); // 2556
+      console.log("25" + null); // 25null
+      console.log("Ale " + undefined); // Aleun
+      console.log("25" + false); // 25false
+
+      // String Conversion Explicitly
+      console.log(String(23));// "23"
+      console.log(String(true)); // "true"
+      console.log(String(32 - false));// "32"
+      console.log(String(32 - true));// "31"
+    </script>
+  </body>
+</html>
