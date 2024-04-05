@@ -6,9 +6,9 @@ function example(x) {
   }
 }
 
-example(true);// nf
-example(false);//f
-example(null);// f
+example(true);
+example(false)
+example(null);
 
 
 
