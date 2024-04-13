@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16px;
+      }
+
+      button {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="blue-btn">Blue</button>
+    <button id="green-btn">Green</button>
+    <button id="red-btn">Red</button>
+  </body>
+  <script>
+    function makeColorChanger(color) {
+      return function () {
+        document.body.style.backgroundColor = color;
+      };
+    }
+
+    const blueBtn = document.getElementById("blue-btn");
+    const greenBtn = document.getElementById("green-btn");
+    const redBtn = document.getElementById("red-btn");
+
+    const changeToBlue = makeColorChanger("blue");
+    const changeToGreen = makeColorChanger("green");
+    const changeToRed = makeColorChanger("red");
+
+    blueBtn.onclick = changeToBlue;
+    greenBtn.onclick = changeToGreen;
+    redBtn.onclick = changeToRed;
+  </script>
+</html>
+
+
+<!-- In this example, we have three buttons (Blue, Green, and Red), each associated with the function, which is responsible for changing the background colour of the body element to the corresponding colour when clicked. These functions are created using the makeColorChanger function, which returns a closure capturing the color parameter. -->
