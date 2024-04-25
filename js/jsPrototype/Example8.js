@@ -16,4 +16,5 @@ let student = {
   __proto__: department,
   id: 1,
 }; // inherited from department
-console.log(student.dept_name);
+// console.log(student.dept_name);
+console.log(subject);
