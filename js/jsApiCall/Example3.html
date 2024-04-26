@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>API calling in js</h1>
+    <script>
+      async function getUserData() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/photos"
+        );
+        let data = await response.json();
+        return data;
+      }
+
+      getUserData().then((data) => {
+        console.log(data);
+        data.map((item, index) => {
+          document.write(`<p>Title: ${item.title}</p>
+          <img src="" alt="" width="250"/>
+          `);
+        });
+      });
+    </script>
+  </body>
+</html>

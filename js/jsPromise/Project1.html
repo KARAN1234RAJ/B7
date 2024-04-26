@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>News API Web Page</h1>
+    <script>
+      let data = fetch(
+        "https://newsapi.org/v2/everything?q=tesla&from=2024-03-26&sortBy=publishedAt&apiKey=d75118449e5148a4ae3f517868dec207")
+      console.log(data);
+      data
+        .then((result) => {
+          result.json().then((value) =>
+            value.articles.map((item, index) => {
+              document.write(` 
+               <div class="container">
+                   <img src="${item.urlToImage}" alt="" height="250px"/>
+                   <a href="${item.url}"><h3>${item.title}</h3></a>
+                   <p>Published At: ${item.publishedAt.split("T")[0]}</p>
+                   <p>Author : ${
+                     item.author ? item.author : "Not Available"
+                   }</p>
+                   <p>Description : ${item.description}</p>
+               </div>
+               
+               `);
+            })
+          );
+        })
+        .catch((error) => {
+          console.log("Error:" + error);
+        });
+    </script>
+  </body>
+</html>

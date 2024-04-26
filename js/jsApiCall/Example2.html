@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>API calling in js</h1>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          data.map((item, index) => {
+            document.write(
+              `<p>Name: ${item.name}<br/>Email:${item.email}</p>` +
+                ` <button onclick='deleteUser(${item.id})'>Delete User</button><br/>`
+            );
+          });
+        });
+    
+    </script>
+  </body>
+</html>

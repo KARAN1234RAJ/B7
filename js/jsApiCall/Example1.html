@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>API calling in js</h1>
+    <script>
+      var XMLRequest = new XMLHttpRequest();
+
+      // creating get request to dummy API call
+      XMLRequest.open("GET", "https://reqres.in/api/users");
+
+      XMLRequest.send();
+
+      XMLRequest.onload = () => {
+        if (XMLRequest.status === 200) {
+          console.log("Request successful");
+        } else {
+          console.log("Error occurred!");
+        }
+
+        console.log(JSON.parse(XMLRequest.response));
+        let result = JSON.parse(XMLRequest.response).data;
+        console.log(result);
+        result.map((item, index) => {
+          document.write(`<h1>UserName: ${item.first_name} ${item.last_name}</h1 
+               <img src="${item.avatar}"/>
+               <h2>Email: ${item.email}</h2> `);
+        });
+      };
+    </script>
+  </body>
+</html>
