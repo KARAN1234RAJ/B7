@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="quotes"></h1>
+    <button onclick="getQuotes()">Click Me for Next Quotes...</button>
+  </body>
+  <script>
+    async function getQuotes() {
+      console.log("button Clicked");
+      let url = "https://api.quotable.io/quotes/random";
+      let result = await fetch(url);
+      console.log(result);
+      let data = await result.json();
+      console.log(data);
+      document.getElementById("quotes").innerHTML = data[0].content;
+    }
+  </script>
+</html>

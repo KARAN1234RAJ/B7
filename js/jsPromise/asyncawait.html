@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="quotes">Jokes!</h1>
+    <button onclick="generateJoke()">Click me for More..</button>
+    <script>
+      function generateJoke() {
+       let data= fetch("https://api.quotable.io/quotes/random");
+       console.log(data);
+         data.then((response) => response.json())
+          .then((data) => {
+          
+            console.log(data[0].content);
+               // document.write(data[0].content);
+                document.getElementById('quotes').innerHTML= data[0].content;
+          });
+        console.log("button clicked");
+      }
+    </script>
+  </body>
+</html>

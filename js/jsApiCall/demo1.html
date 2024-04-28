@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Api Calling by using XMLHttpRequedt method in JavaScript</h1>
+    <script>
+     const xhttp = new XMLHttpRequest();
+     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos");
+     xhttp.send();
+     xhttp.onload=()=>{
+          if(xhttp.status==200){
+               console.log("request sent successfully");
+          }else{
+               console.error(`Request failed: ${xhttp.status}`);
+          }
+        
+          console.log(JSON.parse(xhttp.responseText));
+          let data =JSON.parse(xhttp.responseText)
+         document.write(`
+         <h1> Title: ${data[0].title} </h1>
+         `)
+     }
+     
+     
+    </script>
+  </body>
+</html>
