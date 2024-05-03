@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input id="demo" type="text" placeholder="Enter something" />
+    </form>
+
+    <button onclick="myFunction()">Click Me</button>
+    <script>
+      let div = document.createElement("div");
+      document.body.appendChild(div);
+      function myFunction() {
+        console.log("button clicked");
+        let x = document.getElementById("demo").value;
+        let heading = document.createElement("h2");
+        heading.innerHTML = `You entered: ${x}`;
+        div.appendChild(heading);
+      }
+    </script>
+  </body>
+</html>

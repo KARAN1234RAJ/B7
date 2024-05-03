@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Click below to open a new Window:</h3>
+
+    <button onclick="createWindow()">Open a Window from here</button>
+    <p id="result"></p>
+    
+
+    <script>
+      function createWindow() {
+        let url = "https://www.geeksforgeeks.org/";
+        let win = window.open(url, "My New Window", "width=600, height=500"); 
+        document.getElementById("result").innerHTML =
+          win.name + " - " + win.opener.location; 
+      }
+    </script>
+  </body>
+</html>

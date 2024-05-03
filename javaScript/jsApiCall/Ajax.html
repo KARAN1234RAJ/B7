@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ajax Application !</h1>
+    <button id="btn">Click Me..</button>
+    <script>
+      let button = document.getElementById("btn");
+      button.addEventListener("click", handelar);
+      function handelar() {
+        console.log("Before file  reading...");
+        let xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "./data.json", false);
+        xhttp.onload = function () {
+          if (this.status == 200) {
+            let data = this.responseText;
+            console.log(data);
+          } else {
+            console.log("Error: ", this.status);
+          }
+        };
+        xhttp.send();
+        console.log("After File Reading....");
+
+      }
+    </script>
+  </body>
+</html>

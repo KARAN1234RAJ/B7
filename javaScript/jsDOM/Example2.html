@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Add a heading using JavaScript</h1>
+    <div id="div">
+
+    </div>
+    <script>
+      let div = document.getElementById("div");
+      document.getElementById("heading").innerHTML =
+        "This is the added Heading";
+        let newHeading =  document.createElement("H2");
+        newHeading.innerHTML ="This is another H2 element created by JS";
+        console.log(newHeading);
+        div.appendChild(newHeading)
+    </script>
+  </body>
+</html>

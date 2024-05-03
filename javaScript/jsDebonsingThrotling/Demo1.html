@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debonsing</title>
+  </head>
+  <body>
+    <input id="inputText" type="text" placeholder="Enter text here..." />
+    <div id="display"></div>
+    <script>
+      let timer;
+      const inputText = document
+        .getElementById("inputText")
+        .addEventListener("keydown", () => {
+          // const inputVal = document.getElementById("inputText").value;
+          // console.log(inputVal);
+          // document.getElementById("display").innerHTML = inputVal;
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            const inputVal = document.getElementById("inputText").value;
+            console.log(inputVal);
+            document.getElementById("display").innerHTML = inputVal;
+          }, 500);
+        });
+    </script>
+  </body>
+</html>

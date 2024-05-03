@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throtling</title>
+  </head>
+  <body>
+    <input type="text" id="input" placeholder="Enter here" />
+    <div id="outPut"></div>
+    <script>
+      let lasExecutionTime = 0;
+      let throtllingDelay = 1000;
+      document.getElementById("input").addEventListener("keyup", function () {
+        const now = Date.now();
+        if (now - lasExecutionTime > throtllingDelay) {
+          console.log("new value", this.value);
+          document.getElementById("outPut").innerHTML += `<p>${this.value}</p>`;
+          lasExecutionTime = now;
+        }
+      });
+    </script>
+  </body>
+</html>

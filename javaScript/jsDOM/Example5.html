@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Frontend Development:</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <button onclick="myFunction()">Count</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+          let para = document.getElementById( "demo" );
+        var x = document.getElementsByTagName("LI");
+        console.log(x);
+     //    window.alert("Languages needed for frontend dev are " + x.length + ".");
+     para.innerHTML = "No of li tag is  : "+x.length;
+      }
+    </script>
+  </body>
+</html>

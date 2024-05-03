@@ -1,5 +1,6 @@
 // javascript code goes here
 let tbody = document.getElementsByTagName("tbody")[0]
+
 let url = "https://my-json-server.typicode.com/FreSauce/json-ipl/data";
 fetch(url).then((response) => {
     response.json()
