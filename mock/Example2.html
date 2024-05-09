@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [1, 2, 4, 6, 8];
+      let arr2 = [3, 4, 9];
+      let arr = [];
+      function mergeArray(arr1, arr2) {
+        for (let i = 0; i < Math.max(arr1.length, arr2.length); i++) {
+          if (!arr1[i]) {
+            arr.push(arr2[i]);
+          } else if (!arr2[i]) {
+            arr.push(arr1[i]);
+          } else {
+            arr.push(arr1[i], arr2[i]);
+          }
+        }
+        return arr;
+      }
+      function removeDublicates(arr) {
+        let arr3 = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] != arr[i + 1]) {
+            arr3[i] = arr[i];
+          }
+        }
+        return arr3;
+      }
+      // let newArr= mergeArray(arr1, arr2);
+      // console.log(newArr);
+      console.log(removeDublicates(mergeArray(arr1, arr2)));
+    </script>
+  </body>
+</html>

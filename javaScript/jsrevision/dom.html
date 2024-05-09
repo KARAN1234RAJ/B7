@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h1{
+               font-size: 20px;
+          } */
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">DOM Revision</h1>
+    <h2 class="des">Js Revision is going on!</h2>
+    <h3 class="des">Most of the student have no doubts</h3>
+    <h2 class="des">Js Revision is going on!</h2>
+    <p>One</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <p>Five</p>
+    <button>btn-1</button>
+    <button>btn-2</button>
+    <button>btn-3</button>
+    <!-- 
+          getElementById()
+          getElementsByClassName()
+          querySelector()// single element
+          querySelectorAll()// all element in collection (array)
+
+
+          innnerHtml()
+          innerText()
+          \
+          createElement()
+          appendChild()
+          removeChild()
+      -->
+    <script>
+      //change color of h1 using js
+      let colors = ["red", "blue", "green", "orange", "yellow"];
+      let heading = document.getElementById("heading");
+      let description = document.getElementsByClassName("des");
+      let para = document.querySelectorAll("p");
+      let buttons = document.querySelector("button")
+      console.log(buttons);
+      console.log(para);
+      console.log(description);
+      console.log(heading);
+      heading.style = "color:red";
+      for (let i = 0; i < description.length; i++) {
+        description[i].style = "background-color:pink";
+      }
+      for (let i = 0; i < para.length; i++) {
+        para[i].style = `background-color:${colors[i]}`;
+      }
+    </script>
+  </body>
+</html>

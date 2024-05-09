@@ -7,24 +7,19 @@
   </head>
   <body>
     <h1>ToDo List</h1>
-
     <input id="todo_Input" type="text" placeholder="input Data.." />
-    <!-- <input type="button" value="Add"/> -->
     <button id="btn" onclick="addItem()">Add</button>
-
     <ul id="ul_list"></ul>
     <script>
       let ul_list = document.getElementById("ul_list");
       let todo_Input = document.getElementById("todo_Input");
       function addItem() {
-        console.log(todo_Input.value);
         let list = document.createElement("li");
         let remove_btn = document.createElement("button");
         remove_btn.innerText = "Remove";
         list.innerHTML = todo_Input.value;
         ul_list.appendChild(list);
         todo_Input.value = " ";
-        console.log(remove_btn);
         list.appendChild(remove_btn);
         remove_btn.onclick = () => {
           ul_list.removeChild(list);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      Name:
+      <input
+        id="user-name"
+        type="text"
+        placeholder="Enter name"
+        required
+       
+      /><br />
+      Email:
+      <input
+        id="user-password"
+        type="email"
+        placeholder="Enter your email"
+        required
+      /><br />
+      password:
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="off"
+      /><br />
+      <button onclick="handleSubmit()">Submit</button>
+    </form>
+    <script>
+      function handleSubmit() {
+        console.log("button clicked");
+        let userName = document.getElementById("user-name").value;
+        console.log("user",userName);
+        if (!userName) {
+          alert("userName is Required");
+        }
+      }
+    </script>
+  </body>
+</html>

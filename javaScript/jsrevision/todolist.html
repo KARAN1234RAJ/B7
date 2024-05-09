@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ToDo List</h1>
+    <input id="input_text" type="text" placeholder="Enter here...." />
+    <button id="add_btn" onclick="handleEvents()">Add Item</button>
+    <ul id="ul_list"></ul>
+    <script>
+      const inputText = document.querySelector("#input_text").value;
+      const addBtn = document.querySelector("#add_btn");
+      const ul_list = document.getElementById("ul_list");
+      //  console.log(inputText);
+      //  console.log(addBtn);
+      //  console.log(ul_list);
+
+      function handleEvents() {
+        let list = document.createElement("li");
+        let removeBtn = (document.createElement("button").innerHTML = "remove");
+        console.log(removeBtn);
+        list.appendChild("removeBtn");
+
+        ul_list.appendChild("list");
+      }
+    </script>
+  </body>
+</html>
