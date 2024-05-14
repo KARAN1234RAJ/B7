@@ -1,0 +1,7 @@
+.container{
+     color: blue;
+     background-color: rgb(206, 193, 178);
+     border: 2px solid skyblue;
+     padding: 10px;
+     margin-top: 12px;
+}
