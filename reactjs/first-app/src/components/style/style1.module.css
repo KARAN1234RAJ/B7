@@ -1,0 +1,17 @@
+.heading {
+  color: blue;
+  background-color: pink;
+  
+}
+
+.para {
+  color: blueviolet;
+  background-color: rgb(208, 216, 190);
+  padding: 15px;
+  font-size: 18px;
+}
+.sub-heading {
+  color: green;
+  background-color: bisque;
+  
+}
