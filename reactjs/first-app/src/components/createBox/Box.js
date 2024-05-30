@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 // import "../styles/App.css";
 
-const Box = () => {
+const App = () => {
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("");
-  const createBox = () => {
-    console.log("Box Created");
-
-    
+  const createShape = () => {
+    // console.log("Shape Created")
+    const newBox = document.createElement("div");
+    newBox.style.width = `${width}px`;
+    newBox.style.height = `${height}px`;
+    newBox.style.backgroundColor = backgroundColor;
+    document.getElementById("box-container").appendChild(newBox);
+    setWidth("");
+    setHeight("");
+    setBackgroundColor("");
   };
 
   return (
@@ -19,7 +25,8 @@ const Box = () => {
         <input
           id="width"
           type="number"
-          onChange={(e) => setWidth(e.target.value)}
+          value={width}
+          onChange={(e) => setWidth(() => e.target.value)}
         />
       </div>
       <div>
@@ -27,7 +34,8 @@ const Box = () => {
         <input
           id="height"
           type="number"
-          onChange={(e) => setHeight(e.target.value)}
+          value={height}
+          onChange={(e) => setHeight(() => e.target.value)}
         />
       </div>
       <div>
@@ -35,21 +43,16 @@ const Box = () => {
         <input
           id="backgroundColor"
           type="text"
-          onChange={(e) => setBackgroundColor(e.target.value)}
+          value={backgroundColor}
+          onChange={(e) => setBackgroundColor(() => e.target.value)}
         />
       </div>
-      <button className="create-btn" onClick={() => createBox()}>
+      <button className="create-btn" onClick={createShape}>
         Create Box
       </button>
-      <div
-        id="box-container"
-        style={{ height: "100px", width: "100px", backgroundColor: "red" }}
-      >
-        {height}
-        {width} {backgroundColor}
-      </div>
+      <div id="box-container"></div>
     </div>
   );
 };
 
-export default Box;
+export default App;

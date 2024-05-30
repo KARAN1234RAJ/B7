@@ -1,11 +1,19 @@
 // import Counter from "./components/useState/Counter";
-// import Shoping from "./components/Shoping/Shoping";
+
 // import { useState } from "react";
 // import DogDetails from "./components/nextBtn/DogDetails";
 // import Counter1 from "./components/useState/Counter1";
 
+// import Users from "./components/axios/Users";
+// import GetPostApi from "./components/useEffect/GetPostApi";
+
+// import DemoApi from "./components/useEffect/DemoApi";
+// import News from "./components/useEffect/News";
+
 // import Box from "./components/createBox/Box";
-import UseEffects from "./components/useEffect/useEffects";
+// import Api from "./components/reactApi/Api";
+// import Api2 from "./components/reactApi/Api2";
+// import UseEffects from "./components/useEffect/useEffects";
 
 // import Rating from "./components/form/teacherRating/Rating";
 
@@ -30,7 +38,7 @@ function App() {
 
       <Counter/>
       <Details age={age} setAge={setAge} /> */}
-      {/* <Shoping /> */}
+   
       {/* <DogDetails/> */}
       {/* <Counter1/> */}
       {/* <CatDetails/> */}
@@ -45,7 +53,13 @@ function App() {
       {/* <Form/> */}
       {/* <Rating/> */}
       {/* <Box/> */}
-      <UseEffects/>
+      {/* <UseEffects/> */}
+      {/* <Api/> */}
+      {/* <Api2/> */}
+      {/* <News/> */}
+      {/* <DemoApi /> */}
+      {/* <GetPostApi/> */}
+      {/* <Users/> */}
     </>
   );
 }

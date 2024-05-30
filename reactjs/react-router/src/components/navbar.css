@@ -1,0 +1,15 @@
+.active{
+     background-color: cornflowerblue;
+     color: white;
+     font-size: large;
+}
+
+ul li{
+     display: inline;
+     padding: auto;
+     text-decoration: none;
+     margin: 10px;
+}
+ul li >a{
+     text-decoration: none;
+}

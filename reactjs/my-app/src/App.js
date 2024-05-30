@@ -1,9 +1,13 @@
-import Shop from "./Shop";
-import './app.css';
+import ShopingList from "./shopingList/ShopingList";
 
+// import Shope from "./Shope";
 function App() {
   return (
-    <Shop/>
+    <>
+    {/* <h1>This is App Page </h1> */}
+      {/* <Shope/> */}
+      <ShopingList/>
+    </>
   );
 }
 

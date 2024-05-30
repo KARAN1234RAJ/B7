@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./shop.css";
 
-function Shop() {
+
+function Shope() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -60,7 +60,7 @@ function Shop() {
       }
     };
     fetchData();
-  }, [page]);
+  }, [url]);
 
   const handleChange = (event) => {
     setSearchText(event.target.value);
@@ -95,8 +95,8 @@ function Shop() {
       />
       <div className="shop-articles">
         {data
-         .filter((item) =>
-           item.title.toLowerCase().includes(searchText.toLowerCase())
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchText.toLowerCase())
           )
           .map((item, index) => (
             <div className="article" key={index}>
@@ -117,4 +117,4 @@ function Shop() {
     </>
   );
 }
-export default Shop;
+export default Shope;
