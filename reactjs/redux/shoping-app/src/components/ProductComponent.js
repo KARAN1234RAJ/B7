@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.products);
-  // console.log("products from redux--", products);
+  console.log("products from redux--", products);
   const renderList = products.products.products;
-  // console.log(renderList);
+  console.log(renderList);
   // if (renderList) {
-  //   setIsLOding(false);
+  //   // setIsLOding(false);
   // }
 
   return (
+    // <>Hello</>
     <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "55px" }}>
       {renderList.map((product) => {
         return (
