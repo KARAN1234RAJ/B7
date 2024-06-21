@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './api.css';
+import "./api.css";
 
 const Api = () => {
   const [data, setData] = useState([]);
@@ -26,18 +26,24 @@ const Api = () => {
         <h1>Loading....</h1>
       ) : (
         <div>
-          {data.map((item) => { 
-               return ( 
-                    <div key={item.url} className="card">
-                    <img src={item.urlToImage} alt="news" className="card-img-top" />     
-                    <div className="card-body">   
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">{item.description}</p>
-                    <a href={item.url} className="btn btn-primary">Read More</a>
-                    </div>
-                    </div>
-                    );
-                    })}
+          {data.map((item) => {
+            return (
+              <div key={item.url} className="card">
+                <img
+                  src={item.urlToImage}
+                  alt="news"
+                  className="card-img-top"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{item.title}</h5>
+                  <p className="card-text">{item.description}</p>
+                  <a href={item.url} className="btn btn-primary">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
       )}
     </>

@@ -1,0 +1,14 @@
+{
+  "name": "tb-07-2024",
+  "version": "1.0.0",
+  "description": "this is my first custom module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tech trainer",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
