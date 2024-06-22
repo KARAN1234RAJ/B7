@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 var cors = require('cors')
 app.use(express.json());
-app.use(cors())
+// app.use(cors())
 console.log("From Products page");
 const products = [
   { id: "101", name: "Shirt", category: "Clothing", price: 2000 },
