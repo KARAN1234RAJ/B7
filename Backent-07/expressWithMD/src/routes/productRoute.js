@@ -10,6 +10,8 @@ const {
   deleteProduct,
   getPaginatedData,
 } = require("../controllers/productController");
+
+//// commented code is only for understanding purpose now below code is follow MVC Arch..
 // router.post("/new_product", (req, res) => {
 //   console.log("body", req.body);
 //   Product.create(req.body)
@@ -38,8 +40,6 @@ const {
 //     });
 // });
 
-router.post("/new_product", createProduct);
-
 // router.get("/all", (req, res) => {
 //   Product.find()
 //     .then((data) => {
@@ -50,6 +50,7 @@ router.post("/new_product", createProduct);
 //     });
 // });
 
+router.post("/new_product", createProduct);
 router.get("/all", getAllProducts);
 router.get("/:productId", getSingleProduct);
 router.get("/filter/all", getFilterProduct);
